@@ -11,7 +11,7 @@ rl.on('line', (answer) => {
     rl.close();
     stdout.write('Bye bye!');
   } else {
-    fs.appendFile(fileDestination, answer, function(error){
+    fs.appendFile(fileDestination, `${answer} \n`, function(error){
     if(error) throw error;
     });
   }
